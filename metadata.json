@@ -1,0 +1,6 @@
+{
+  "name": "CloudCast Browser",
+  "description": "サーバー上で実行されるブラウザ画面をリアルタイムにストリーミングし、タップ・クリック・スクロール・文字入力を遠隔操作できるクラウドブラウザシステム。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

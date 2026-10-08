@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudCast Browser - クラウドブラウザ・リモート操作ストリーミング</title>
+    <meta name="description" content="サーバー上で実行されるブラウザ画面をリアルタイムにストリーミングし、タップ・クリック・スクロール・文字入力を遠隔操作できるクラウドブラウザシステム。" />
+    <meta property="og:title" content="CloudCast Browser - クラウドブラウザ・リモート操作ストリーミング" />
+    <meta property="og:description" content="サーバー上で実行されるブラウザ画面をリアルタイムにストリーミングし、タップ・クリック・スクロール・文字入力を遠隔操作できるクラウドブラウザシステム。" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      // Ignore HMR / WebSocket errors in dev iframe environment
+      window.addEventListener('error', function (event) {
+        if (event && (event.message?.includes?.('WebSocket') || event.filename?.includes?.('@vite/client'))) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function (event) {
+        if (event && event.reason?.message?.includes?.('WebSocket')) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-sky-500/30 selection:text-sky-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
